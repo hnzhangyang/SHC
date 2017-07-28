@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SHC test</title>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div id="target">
+    </div>
+</body>
+<script>
+    var oldVnode = {
+        elm: document.getElementById('target'),
+        children: [
+            { tag: 'li', children: [{ text: 'li 1' }] },
+            { tag: 'li', children: [{ text: 'li 2' }] },
+            { tag: 'li', children: [{ text: 'li 3' }] },
+            { tag: 'li', children: [{ text: 'li 4' }] },
+            { tag: 'li', children: [{ text: 'li 5' }] }
+        ],
+        tag: 'ul'
+    }
+
+    var vnode = {
+        elm: document.getElementById('target'),
+        children: [
+            { tag: 'li', children: [{ text: 'li 1' }] },
+            { tag: 'li', children: [{ text: 'li 4' }] }
+        ],
+        tag: 'ul'
+    }
+
+    patch(vnode.elm, oldVnode)
+
+    patch(oldVnode, vnode)
+
+</script>
+
+</html>
