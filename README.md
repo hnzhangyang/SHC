@@ -4,6 +4,6 @@ SHC is a simple HTML-template compiler that helps you compile your HTML code to 
 SHC consists of a html-compiler and virtual DOM library. the virtual DOM library is alternative. Transform your AST into vnode then you can use path function
 to render your vnode.
 
-
+## usage
 
 
