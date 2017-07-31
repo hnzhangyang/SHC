@@ -107,4 +107,4 @@ And in the normaly case, you have 2 vnodes to compare which property needs updat
 ``` javaScript
 patch(vnode1, vnode2)
 ```
-Vnode1 is the old vnode and vnode2 is the new vnode. SHC will compare the 2 vnode automatic.
+Vnode1 is the old vnode and vnode2 is the new vnode. SHC will compare the 2 vnode and update automatic.
