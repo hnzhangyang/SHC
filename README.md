@@ -10,7 +10,7 @@ SHC provides a convenient way to parse your HTML-template. Just call parse funct
 The parse function takes two arguments. The first is your HTML-template and the second is an Object contain parsing hooks.
 
 ### Usage
-html 
+
 ``` html
 <div id="target">
     <ul>
@@ -22,7 +22,6 @@ html
 </div>
 ```
 
-javaScript
 ``` javaScript
 var template = document.getElementById('target').outerHTML
 var root = parse(template)
