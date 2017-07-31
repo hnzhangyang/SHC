@@ -102,7 +102,7 @@ patch(elm, vnode)
 
 SHC will render the vnode on target 'example'.
 
-And in the normaly case, you have 2 vnodes to compare which property needs update, just use it below.
+And in the normaly case, you have 2 vnodes to compare which property needs update, just use it as below.
 
 ``` javaScript
 patch(vnode1, vnode2)
