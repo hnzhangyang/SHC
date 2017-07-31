@@ -56,7 +56,7 @@ var root = parse(template, {
 ```
 
 ## Patch
-The patch function helps you render yuor vnode. Before use patch function you must transform your AST Object ( returned the parse function ) into vnode by youself.
+The patch function helps you render your vnode. Before use patch function you must transform your AST Object ( returned the parse function ) into vnode by youself.
 
 ### Vnode
 Vnode must like below
@@ -108,3 +108,5 @@ And in the normaly case, you have 2 vnodes to compare which property needs updat
 patch(vnode1, vnode2)
 ```
 Vnode1 is the old vnode and vnode2 is the new vnode. SHC will compare the 2 vnode and update automatic.
+
+
