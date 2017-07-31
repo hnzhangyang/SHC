@@ -6,6 +6,10 @@ to render your vnode.
 
 ## parse
 ### usage
+SHC provides a convenient way to parse your HTML-template. Just call parse function.  : )
+
+The parse function takes two arguments. The first is your HTML-template and the second is an Object contain parsing hooks.
+
 html 
 ``` html
 <div id="target">
@@ -21,17 +25,11 @@ html
 javaScript
 ``` javaScript
 var template = document.getElementById('target').outerHTML
-var root = parse(template,{
-    start:function(){
-        console.log('start')
-    },
-    end:function(){
-        console.log('end')
-    },
-    chars:function(){
-        console.log('chars')
-    }
-})
+var root = parse(template)
 ```
+
+The parse function return a AST object. 
+
+Note: Your HTML-template must have only 1 root element now.
 
 
