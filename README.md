@@ -81,7 +81,7 @@ var vnode = new VNode(tag, data, children, text, elm, context)
 ### Render
 After you made your vnode. you can use the patch function to render vnode.
 
-In the first render,there has only 1 vnode to patch, you can use it below.
+In the first render,there has only 1 vnode to patch, you can use it like below.
 
 ``` html
 <div id="example">
@@ -102,7 +102,7 @@ patch(elm, vnode)
 
 SHC will render the vnode on target 'example'.
 
-And in the normaly case, you have 2 vnodes to compare which property needs update, just use it as below.
+And in the normaly case, you have 2 vnodes to compare which property needs update, just use it like below.
 
 ``` javaScript
 patch(vnode1, vnode2)
