@@ -55,3 +55,56 @@ var root = parse(template, {
 })
 ```
 
+## Patch
+The patch function helps you render yuor vnode. Before use patch function you must transform your AST Object ( returned the parse function ) into vnode by youself.
+
+### Vnode
+Vnode must like below
+
+``` javaScript
+var vnode = {
+    tag: tag,
+    data: data,
+    children: children,
+    text: text,
+    elm: elm,
+    context: context
+}
+```
+Also your can via VNode constructor to generate a vnode.
+
+``` javaScript
+var vnode = new VNode(tag, data, children, text, elm, context)
+```
+**Note** Normaly, for render a vnode, vnode object must have tag, data, children or text property. 
+
+### Render
+After you made your vnode. you can use the patch function to render vnode.
+
+In the first render,there has only 1 vnode to patch, you can use it below.
+
+``` html
+<div id="example">
+    <ul>
+        <li>li 1</li>
+        <li>li 2</li>
+        <li>li 3</li>
+        <li>li 4</li>
+    </ul>
+</div>
+```
+
+``` javaScript
+var elm = document.getElementById('example')
+
+patch(elm, vnode)
+```
+
+SHC will render the vnode on target 'example'.
+
+And in the normaly case, you have 2 vnodes to compare which property needs update, just use it below.
+
+``` javaScript
+patch(vnode1, vnode2)
+```
+Vnode1 is the old vnode and vnode2 is the new vnode. SHC will compare the 2 vnode automatic.
