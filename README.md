@@ -37,7 +37,14 @@ The parse function to accept 3 hooks when parsing template.
  - end 
  - chars
 
-The start hooks call when SHC finds a new tag, the end hooks call when SHC tries to close a tag, the chars hook call when SHC parsing a node content.
+#### The start hook
+This hook is invoked when SHC finds a new tag.
+
+#### The end hook
+This hook is invoked when SHC tries to close a tag.
+
+#### The chars hook
+This hook is invoked when SHC parsing a node content.
 
 ``` javaScript
 var template = document.getElementById('target').outerHTML
