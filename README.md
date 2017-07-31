@@ -113,3 +113,4 @@ Vnode1 is the old vnode and vnode2 is the new vnode. SHC will compare the 2 vnod
 ## Note
 - Do not use patch function to render AST object directly, this is illegal. 
 - SHC is supporting IE6+ and modern browser. So you don't need to worried about compatibility issue.
+- If you have any other questions in vnode or the patch function, see [example](https://github.com/hnzhangyang/SHC/tree/master/example).
