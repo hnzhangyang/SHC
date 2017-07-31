@@ -1,10 +1,37 @@
-# SHC
-## a simple HTML compiler
+# a simple HTML compiler
 SHC is a simple HTML-template compiler that helps you compile your HTML code to AST(Abstract Syntax Tree).
 
 SHC consists of a html-compiler and virtual DOM library. the virtual DOM library is alternative. Only you must to do is transforming your AST into vnode then you can use path function
 to render your vnode.
 
 ## parse
+### usage
+html 
+``` html
+<div id="target">
+    <ul>
+        <li>li 1</li>
+        <li>li 2</li>
+        <li>li 3</li>
+        <li>li 4</li>
+    </ul>
+</div>
+```
+
+javaScript
+``` javaScript
+var template = document.getElementById('target').outerHTML
+var root = parse(template,{
+    start:function(){
+        console.log('start')
+    },
+    end:function(){
+        console.log('end')
+    },
+    chars:function(){
+        console.log('chars')
+    }
+})
+```
 
 
