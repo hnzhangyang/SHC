@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SHC test</title>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div id="target">
+        <ul v-for="item in items">
+            <li key="ke1">li 1</li>
+            <li key="ke2">li 2</li>
+            <li key="ke3">li 3</li>
+            <li key="ke4">li 4</li>
+        </ul>
+    </div>
+</body>
+<script>
+    var template = document.getElementById('target').outerHTML
+    var elm = document.getElementById('target')
+
+    var root = parse(template, {
+        start: function () {
+            console.log('start')
+        },
+        end: function () {
+            console.log('end')
+        },
+        chars: function () {
+            console.log('chars')
+        }
+    })
+
+    var vnode1 = {
+        tag: 'div',
+        children: [{
+            tag: 'ul', children: [
+                { tag: 'li', children: [{ text: 11 }] },
+                { tag: 'li', children: [{ text: 22 }] },
+                { tag: 'li', children: [{ text: 33 }] },
+                { tag: 'li', children: [{ text: 44 }] },
+                { tag: 'li', children: [{ text: 55 }] }
+            ]
+        }]
+    }
+
+    var vnode2 = {
+        tag: 'div',
+        children: [{
+            tag: 'ul', children: [
+                { tag: 'li', data: { 'class': 'class1', key: 'key1' }, children: [{ text: 66 }] },
+                { tag: 'li', data: { 'class': 'class2', key: 'key2'  }, children: [{ text: 77 }] },
+                { tag: 'li', data: { 'class': 'class3', key: 'key3'  }, children: [{ text: 88 }] }
+            ]
+        }]
+    }
+
+    patch(elm, vnode1)
+    patch(vnode1, vnode2)
+
+</script>
+
+</html>

@@ -57,7 +57,7 @@ function parse(template, options) {
 
             currentParent.children.push({
                 type: 3,
-                text
+                text:text
             })
         }
     })

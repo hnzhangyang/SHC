@@ -12,7 +12,7 @@ function isDef(s) {
     return s != null
 }
 
-// compare the tow Vnodes .
+// compare the two Vnodes.
 function sameVnode(vnode1, vnode2) {
     return (
         vnode1.key === vnode2.key &&
@@ -108,6 +108,15 @@ function createElm(vnode) {
 
     if (isDef(tag)) {
         vnode.elm = nodeOps.createElement(tag, vnode)
+
+        if (data) {
+            for (var item in data) {
+                if (data.hasOwnProperty(item)) {
+                    nodeOps.setAttribute(vnode.elm, item, data[item])
+                }
+            }
+        }
+
         createChildren(vnode, children)
     }
 
