@@ -5,11 +5,11 @@ SHC consists of a html-compiler and virtual DOM library. the virtual DOM library
 to render your vnode.
 
 ## parse
-### usage
-SHC provides a convenient way to parse your HTML-template. Just call parse function.  : )
+SHC provides a convenient way to parse your HTML-template. Just call parse function.   : )
 
 The parse function takes two arguments. The first is your HTML-template and the second is an Object contain parsing hooks.
 
+### usage
 html 
 ``` html
 <div id="target">
