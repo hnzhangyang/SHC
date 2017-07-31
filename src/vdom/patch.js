@@ -236,4 +236,4 @@ function patch(oldVnode, vnode) {
 }
 
 
-window.patch = patch
+module.exports = patch
