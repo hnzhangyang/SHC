@@ -30,7 +30,7 @@ var root = parse(template)
 
 The parse function return a AST object. 
 
-**Note**: Your HTML-template must have only 1 root element for now. if you have any advice, [issue](https://github.com/hnzhangyang/SHC/issues) me.
+**Note**: Your HTML-template must have only 1 root element for now. if you have any advice, [issue](https://github.com/hnzhangyang/SHC/issues) me : )
 
 ### Parsing hooks
 The parse function to accept 3 hooks when parsing template. 
