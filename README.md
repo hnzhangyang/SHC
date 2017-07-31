@@ -75,7 +75,7 @@ Also your can via VNode constructor to generate a vnode.
 ``` javaScript
 var vnode = new VNode(tag, data, children, text, elm, context)
 ```
-**Note** Normaly, for render a vnode, vnode object must have tag, data, children or text property. 
+**Note** Normaly, for render a vnode, vnode object must have tag, children or text property. 
 
 ### Render
 After you made your vnode. you can use the patch function to render vnode.
