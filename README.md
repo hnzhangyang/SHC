@@ -87,7 +87,7 @@ var vnode = new VNode(tag, data, children, text, elm, context)
 ### Render
 After you made your vnode. you can use the patch function to render vnode.
 
-In the first render,there has only 1 vnode to patch, you can use it like below.
+In the first render, there has only 1 vnode to patch, you can use it like below.
 
 ``` html
 <div id="example">
