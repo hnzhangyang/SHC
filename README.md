@@ -18,7 +18,7 @@ The parse function takes two arguments. The first is your HTML-template and the 
         <li>li 2</li>
         <li>li 3</li>
         <li>li 4</li>
-    </ul>
+    </ul> 
 </div>
 ```
 
