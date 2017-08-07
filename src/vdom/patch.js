@@ -2,7 +2,7 @@ var nodeOps = require('./env.js')
 var VNode = require('./vnode.js')
 var utils = require('../util/index.js')
 
-var hooks = ['create', 'update', 'remove', 'destroy']
+var _options 
 
 function isUndef(s) {
     return s == null
@@ -205,8 +205,12 @@ function updateChildren(parentElm, oldCh, newCh) {
     }
 }
 
-function patch(oldVnode, vnode) {
+function patch(oldVnode, vnode, options) {
     if (!vnode) return
+
+    if(utils.isObject(options)){
+        _options = options
+    }
 
     var elm, parent
 
