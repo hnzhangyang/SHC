@@ -41,9 +41,7 @@ describe('parser', function () {
         var end = function (tagName) {
             arr.push(tagName)
         }
-
         var ast = parse('<p><a>hello world</a></p>', { end })
-
         expect(arr.length).to.be.equal(2)
     })
 })
