@@ -2,7 +2,7 @@ import { expect } from 'chai'
 import patch from '../../src/vdom/index'
 import VNode from '../../src/vdom/vnode'
 
-describe('parser', function () {
+describe('patch', function () {
     it('create simple element', () => {
         var vnode = new VNode('div', {}, [{ text: 'hello world' }])
         var elm = patch(null, vnode)
